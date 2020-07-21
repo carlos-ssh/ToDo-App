@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      To Do App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+
+
+  <ion-list color="light">
+    <ion-item *ngFor="let lista of deseosService.listas"
+              detail color="dark">
+      <ion-label> {{ lista.titulo }} </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+<!--Boton Add-->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary"
+                    (click)="agregarLista()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>
